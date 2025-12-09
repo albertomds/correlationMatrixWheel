@@ -1,7 +1,10 @@
 # 0 - Dependencies
-pip install dash plotly numpy
 
-1 -  Input Data: How to Generate correl.dat ?
+```bash
+pip install dash plotly numpy
+```
+
+# 1 -  Input Data: How to Generate correl.dat ?
 
 The .dat correlation files must be created using CPPTRAJ.
 
