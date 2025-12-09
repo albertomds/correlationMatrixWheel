@@ -1,12 +1,13 @@
-0 - Dependencies
+# 0 - Dependencies
 pip install dash plotly numpy
 
-1 -  Input Data: How to Generate correl.dat
+1 -  Input Data: How to Generate correl.dat ?
 
 The .dat correlation files must be created using CPPTRAJ.
 
 Example CPPTRAJ script:
 
+```bash
 parm ../../stripped_all.step3_pbcsetup.parm7
 trajin "../../00_prodnoWAT_all.nc"
 
@@ -15,22 +16,22 @@ rms first
 
 # Compute residue-by-residue cross-correlation on C and P atoms
 matrix '@C,P' '@C,P' correl out correl.dat byres
-
+```
 
 This produces correl.dat, a square matrix with per-residue correlation values.
 
 The Python app typically loads files named like:
 
-correl_01_9mku.dat
-correl_02_9mku.dat
-correl_03_9mku.dat
+correl_01.dat
+correl_02.dat
+correl_03.dat
 
-✏️ Editable User Settings (IMPORTANT)
+# Editable User Settings
 
 At the top of the script, several variables are designed to be modified by the user.
 These control which files are loaded, the regions to plot, thresholds, and display options.
 
-``
+```python
 filenames = ["correl_01_9mku.dat", "correl_01_9mku.dat", "correl_01_9mku.dat"]
 labels = ["FILE1", "FILE2", "FILE3"]
 
@@ -42,12 +43,12 @@ radius = 1.0                  # Base circle radius
 
 showIndices = False           # Show residue index numbers on outer ring
 showColorBar = True           # Show colorbar on last graph only
-``
+```
 
-🔍 Region Definitions
+# Region Definitions
 
 This block defines which residue intervals form each sector of the circular plot:
-
+```python
 regions = [
     (953, 1000),  # Region 1: BH-H1
     (1009,1021),  # Region 2: Lid
@@ -57,6 +58,6 @@ regions = [
 
 region_names = ['BH-H1', 'Lid', 'DNA2', 'DNA']
 region_colors = ["#e181b0", "#00ff22", "#f01be2", "#f0db1b"]
-
+```
 
 You can add more regions as long as each has a name and color.
