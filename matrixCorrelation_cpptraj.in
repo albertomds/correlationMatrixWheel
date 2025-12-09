@@ -1,0 +1,6 @@
+parm ../../stripped_all.step3_pbcsetup.parm7
+trajin "../../00_prodnoWAT_all.nc"
+#You have to align the trajectory to the first frame or to an average structure
+rms first
+#Example of a cross correlation matrix of all carbon atoms of a protein
+matrix '@C,P' '@C,P' correl out correl.dat byres
