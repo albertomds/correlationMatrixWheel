@@ -25,9 +25,9 @@ This produces correl.dat, a square matrix with per-residue correlation values.
 
 The Python app typically loads files named like:
 
-correl_01.dat
-correl_02.dat
-correl_03.dat
+```bash
+["correl_01.dat", "correl_02.dat", "correl_03.dat"]
+```
 
 # Editable User Settings
 
@@ -35,7 +35,7 @@ At the top of the script, several variables are designed to be modified by the u
 These control which files are loaded, the regions to plot, thresholds, and display options.
 
 ```python
-filenames = ["correl_01_9mku.dat", "correl_01_9mku.dat", "correl_01_9mku.dat"]
+filenames = ["correl_01.dat", "correl_02.dat", "correl_03.dat"]
 labels = ["FILE1", "FILE2", "FILE3"]
 
 max_arcs = 2500               # Max arcs drawn per region pair
