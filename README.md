@@ -30,6 +30,7 @@ correl_03_9mku.dat
 At the top of the script, several variables are designed to be modified by the user.
 These control which files are loaded, the regions to plot, thresholds, and display options.
 
+``
 filenames = ["correl_01_9mku.dat", "correl_01_9mku.dat", "correl_01_9mku.dat"]
 labels = ["FILE1", "FILE2", "FILE3"]
 
@@ -41,6 +42,7 @@ radius = 1.0                  # Base circle radius
 
 showIndices = False           # Show residue index numbers on outer ring
 showColorBar = True           # Show colorbar on last graph only
+``
 
 🔍 Region Definitions
 
