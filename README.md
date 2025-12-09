@@ -20,6 +20,10 @@ rms first
 # Compute residue-by-residue cross-correlation on C and P atoms
 matrix '@C,P' '@C,P' correl out correl.dat byres
 ```
+Run cpptraj script:
+```bash
+cpptraj -i matrixCorrelation.in
+```
 
 This produces correl.dat, a square matrix with per-residue correlation values.
 
