@@ -39,17 +39,18 @@ filenames = ["correl_01.dat", "correl_02.dat", "correl_03.dat"]
 labels = ["FILE1", "FILE2", "FILE3"]
 
 max_arcs = 2500               # Max arcs drawn per region pair
-min_corr_threshold = 0.1      # Only draw arcs above this |value|
-index_correction = 3          # Shift residue numbers shown in labels
+min_corr_threshold = 0.35     # Only draw arcs above/below this |value|
+index_correction = +3         # Shift residue numbers shown in labels (This just affects the final visualization)
 label_radius = 1.02           # Radius for residue-number labels
 radius = 1.0                  # Base circle radius
 
 showIndices = False           # Show residue index numbers on outer ring
-showColorBar = True           # Show colorbar on last graph only
+showColorBar = True           # Show colorbar 
 ```
 
 # Region Definitions
 
+Use comments to not forget this regions. Use the numbers as they appear in the input
 This block defines which residue intervals form each sector of the circular plot:
 ```python
 regions = [
